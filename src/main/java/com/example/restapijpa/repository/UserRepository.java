@@ -8,16 +8,17 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 @Repository
 public interface UserRepository extends JpaRepository<UsersMainInfoEntity, Long> {
 
-    Optional<UsersMainInfoEntity> findUsersMainInfoEntityById(Long id);
+    Optional<UsersMainInfoEntity> getUsersMainInfoById(Long id);
 
-    Optional<UsersMainInfoEntity> findUsersMainInfoByUsername(String username);
+    Optional<UsersMainInfoEntity> getUserMainInfoByUsername(String username);
 
-    Optional<UsersMainInfoEntity> findUsersMainInfoByEmail(String email);
+    Optional<UsersMainInfoEntity> getUsersMainInfoByEmail(String email);
 
     @Modifying
     @Query("UPDATE UsersMainInfoEntity u SET " +

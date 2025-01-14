@@ -57,6 +57,16 @@ public class UsersMainInfoEntity {
         this.age = age;
     }
 
+    public void copy(UsersMainInfoEntity usersMainInfo) {
+        this.id = usersMainInfo.getId();
+        this.username = usersMainInfo.getUsername();
+        this.firstName = usersMainInfo.getFirstName();
+        this.secondName = usersMainInfo.getSecondName();
+        this.email = usersMainInfo.getEmail();
+        this.dob = usersMainInfo.getDob();
+        this.age = usersMainInfo.getAge();
+    }
+
     public UsersMainInfoEntity() {
     }
 
